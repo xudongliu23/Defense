@@ -165,56 +165,56 @@
   \end{figure}
 }
 
-\frameT{Learning PLP-trees}{
-	\begin{block}{Consistent Learning (\tsc{ConsLearn})}
-		Given an example set $\cE$, decide 
-		whether there exists a PLP-tree $T$ (of a particular type) such that $T$ 
-		is consistent with $\cE$.
-	\end{block}
-	\vspace{-0.3cm}
-
-  \begin{figure}[ht]
-     \small
-    \centering
-    \begin{subfigure}[b]{0.95\textwidth}
-      \centering
-      \begin{tikzpicture}[->,>=stealth,node distance=0.5cm,main node/.style={rectangle,font=\small}]
-        \node[main node] (1)              {\textcolor{blue}{($<$sdn,5,blk,m,h,m,m$>$,$<$suv,7m,wht,b,f,m,m$>$)}}; 
-        \node[main node] (2) [below of=1] {\textcolor{green}{($<$spt,2,wht,s,bmw,h,h$>$,$<$spt,2,wht,s,bmw,vh,h$>$)}};
-        \node[main node] (3) [below of=2] {\textcolor{blue}{($<$mvn,7m,gry,b,f,m,m$>$,$<$sdn,5,bl,m,f,m,m$>$)}};
-        \node[main node] (4) [below of=3] {\textcolor{red}{($<$suv,7m,gry,b,vw,vh,m$>$,$<$suv,7m,gry,b,vw,h,m$>$)}};
-      \end{tikzpicture}
-      %\caption{Examples}
-    \end{subfigure}\\ \vspace{0.5cm}
-    \begin{subfigure}[b]{0.95\textwidth}
-    	\centering
-      \begin{tikzpicture}[->,>=stealth',
-        level 1/.style={sibling distance=2cm, level distance=33pt},
-        level 2/.style={sibling distance=0.7cm, level distance=27pt}
-      ]
-
-        \node[main node,inner sep=2pt] (1) {B};
-        \node[rectangle,draw,inner sep=2pt] at (1.8,0) {\textcolor{blue}{$mvn\!\! >\!\! sdn\!\! >\!\! suv\!\! >\!\! spt$}};
-
-        \node[main node,inner sep=2pt] (2) [below of=1] {P};
-        \node[rectangle split, rectangle split parts=4, draw,inner sep=2pt,font=\sffamily\small] at (1.6,-1.5)
-            {
-              \textcolor{green}{$spt\!:m \!\!>\!\! h\!\!>\!\! l\!\!>\!\! vh$}
-              \nodepart{second}
-              \textcolor{red}{$suv\!:vh \!\!>\!\! h\!\!>\!\! m\!\!>\!\! l$}
-              \nodepart{third}
-              $mvn\!:\!m \!\!>\!\! h\!\!>\!\! l\!\!>\!\! vh$
-              \nodepart{fourth}
-              $sdn\!:\!m \!\!>\!\! h\!\!>\!\! l\!\!>\!\! vh$
-            };
-
-        \path[every node/.style={font=\sffamily\small}]
-          (1) edge (2);
-      \end{tikzpicture}
-      \caption*{UICP tree}
-    \end{subfigure}
-  \end{figure}
-}
+%\frameT{Learning PLP-trees}{
+%	\begin{block}{Consistent Learning (\tsc{ConsLearn})}
+%		Given an example set $\cE$, decide 
+%		whether there exists a PLP-tree $T$ (of a particular type) such that $T$ 
+%		is consistent with $\cE$.
+%	\end{block}
+%	\vspace{-0.3cm}
+%
+%  \begin{figure}[ht]
+%     \small
+%    \centering
+%    \begin{subfigure}[b]{0.95\textwidth}
+%      \centering
+%      \begin{tikzpicture}[->,>=stealth,node distance=0.5cm,main node/.style={rectangle,font=\small}]
+%        \node[main node] (1)              {\textcolor{blue}{($<$sdn,5,blk,m,h,m,m$>$,$<$suv,7m,wht,b,f,m,m$>$)}}; 
+%        \node[main node] (2) [below of=1] {\textcolor{green}{($<$spt,2,wht,s,bmw,h,h$>$,$<$spt,2,wht,s,bmw,vh,h$>$)}};
+%        \node[main node] (3) [below of=2] {\textcolor{blue}{($<$mvn,7m,gry,b,f,m,m$>$,$<$sdn,5,bl,m,f,m,m$>$)}};
+%        \node[main node] (4) [below of=3] {\textcolor{red}{($<$suv,7m,gry,b,vw,vh,m$>$,$<$suv,7m,gry,b,vw,h,m$>$)}};
+%      \end{tikzpicture}
+%      %\caption{Examples}
+%    \end{subfigure}\\ \vspace{0.5cm}
+%    \begin{subfigure}[b]{0.95\textwidth}
+%    	\centering
+%      \begin{tikzpicture}[->,>=stealth',
+%        level 1/.style={sibling distance=2cm, level distance=33pt},
+%        level 2/.style={sibling distance=0.7cm, level distance=27pt}
+%      ]
+%
+%        \node[main node,inner sep=2pt] (1) {B};
+%        \node[rectangle,draw,inner sep=2pt] at (1.8,0) {\textcolor{blue}{$mvn\!\! >\!\! sdn\!\! >\!\! suv\!\! >\!\! spt$}};
+%
+%        \node[main node,inner sep=2pt] (2) [below of=1] {P};
+%        \node[rectangle split, rectangle split parts=4, draw,inner sep=2pt,font=\sffamily\small] at (1.6,-1.5)
+%            {
+%              \textcolor{green}{$spt\!:m \!\!>\!\! h\!\!>\!\! l\!\!>\!\! vh$}
+%              \nodepart{second}
+%              \textcolor{red}{$suv\!:vh \!\!>\!\! h\!\!>\!\! m\!\!>\!\! l$}
+%              \nodepart{third}
+%              $mvn\!:\!m \!\!>\!\! h\!\!>\!\! l\!\!>\!\! vh$
+%              \nodepart{fourth}
+%              $sdn\!:\!m \!\!>\!\! h\!\!>\!\! l\!\!>\!\! vh$
+%            };
+%
+%        \path[every node/.style={font=\sffamily\small}]
+%          (1) edge (2);
+%      \end{tikzpicture}
+%      \caption*{UICP tree}
+%    \end{subfigure}
+%  \end{figure}
+%}
 
 %\frameT{Learning PLP-trees}{
 %	\begin{block}{Consistent Learning (\tsc{ConsLearn})}
@@ -238,24 +238,24 @@
 %	\end{block}
 %}
 
-\frameT{Computational Complexity}{
-  \begin{enumerate}
-    \item $P$, $\NP$, $\coNP$: We typically believe that $P \subset \NP$ and $P \subset \coNP$.
-    %\item $\coNP$: problems whose complements are in $\NP$.
-    \item $\deltap{2}$: $P^\NP$, $\sigmap{2}$: $\NP^\NP$, and $\pip{2}$: $\coNP^\NP$.
-    \item $C$-complete: hardest decision problems in class $C$.
-    %\item A decision problem $L$ is $C$-hard if $L' \leq_p L$ for every $L'$ in class $C$.
-    %\item A decision problem $L$ is $C$-complete if $L$ is in class $C$ and $L$ is $C$-hard.
-  \end{enumerate}
-
-  \vspace{-0.3cm}
-
-  \begin{figure}[ht!]
-    \centering
-      \includegraphics[width=0.5\textwidth]{figs/Preliminary/comp_diagram.pdf}
-    \caption{Computational complexity diagram}
-  \end{figure}
-}
+%\frameT{Computational Complexity}{
+%  \begin{enumerate}
+%    \item $P$, $\NP$, $\coNP$: We typically believe that $P \subset \NP$ and $P \subset \coNP$.
+%    %\item $\coNP$: problems whose complements are in $\NP$.
+%    \item $\deltap{2}$: $P^\NP$, $\sigmap{2}$: $\NP^\NP$, and $\pip{2}$: $\coNP^\NP$.
+%    \item $C$-complete: hardest decision problems in class $C$.
+%    %\item A decision problem $L$ is $C$-hard if $L' \leq_p L$ for every $L'$ in class $C$.
+%    %\item A decision problem $L$ is $C$-complete if $L$ is in class $C$ and $L$ is $C$-hard.
+%  \end{enumerate}
+%
+%  \vspace{-0.3cm}
+%
+%  \begin{figure}[ht!]
+%    \centering
+%      \includegraphics[width=0.5\textwidth]{figs/Preliminary/comp_diagram.pdf}
+%    \caption{Computational complexity diagram}
+%  \end{figure}
+%}
 
 \frameT{Complexity Results on PLP-trees} {
   \begin{figure}[!ht]
@@ -266,7 +266,7 @@
         \hline
            & UP & CP \\
         \hline
-        UI & P & P\\
+        UI & P & NP\\
         \hline
         CI & NPC\footnotemark & P  \\
         \hline
@@ -344,85 +344,284 @@
 	\footnotetext{\tiny \url{http://www.cs.uky.edu/~liu/preflearnlib.php}}
 }
 
-\frameT{PLP-Trees To Learn}{
-  \begin{figure}[ht!]
-    \centering
-      \includegraphics[width=0.4\textwidth]{figs/Cars/uiuptree.png}
-    \caption{Unconditional Importance \& Unconditional Preference (UIUP)}
-  \end{figure}
-}
+%\frameT{PLP-Trees To Learn}{
+%  \begin{figure}[ht!]
+%    \centering
+%      \includegraphics[width=0.4\textwidth]{figs/Cars/uiuptree.png}
+%    \caption{Unconditional Importance \& Unconditional Preference (UIUP)}
+%  \end{figure}
+%}
+%
+%\frameT{PLP-Trees To Learn}{
+%  \begin{figure}[ht!]
+%    \centering
+%      \includegraphics[width=0.65\textwidth]{figs/Cars/uicptree.png}
+%    \caption{UICP with at most 1 parent (UICP-1)}
+%  \end{figure}
+%}
+%
+%\frameT{PLP-Trees To Learn}{
+%  \begin{figure}[ht!]
+%    \centering
+%      \includegraphics[width=0.9\textwidth]{figs/Cars/ciuptree.png}
+%    \caption{CIUP with 1 split at the root (CIUP-1)}
+%  \end{figure}
+%}
+%
+%\frameT{PLP-Trees To Learn}{
+%  \begin{figure}[ht!]
+%    \centering
+%      \includegraphics[width=0.9\textwidth]{figs/Cars/cicptree.png}
+%    \caption{Simple CICP (SCICP)}
+%  \end{figure}
+%}
 
-\frameT{PLP-Trees To Learn}{
-  \begin{figure}[ht!]
-    \centering
-      \includegraphics[width=0.65\textwidth]{figs/Cars/uicptree.png}
-    \caption{UICP with at most 1 parent (UICP-1)}
-  \end{figure}
-}
-
-\frameT{PLP-Trees To Learn}{
-  \begin{figure}[ht!]
-    \centering
-      \includegraphics[width=0.9\textwidth]{figs/Cars/ciuptree.png}
-    \caption{CIUP with 1 split at the root (CIUP-1)}
-  \end{figure}
-}
-
-\frameT{PLP-Trees To Learn}{
-  \begin{figure}[ht!]
-    \centering
-      \includegraphics[width=0.9\textwidth]{figs/Cars/cicptree.png}
-    \caption{Simple CICP (SCICP)}
-  \end{figure}
-}
-
-\frameT{Experimental Results: CarEvaluation\footnote{
-\tiny \url{http://www.cs.uky.edu/~liu/preflearnlib.php}}
-}
+\frameT{Experimental Results: Best-Agreement vs. Greedy}
 {
-	\begin{center}
-		\#attributes:6, \#objects:1728, \#examples:682721
-	\end{center}
+	\begin{table}
+	  \centering
+	  \begin{tabular}{ |c||c|c| }
+	    \hline
+	    Dataset          & BA-UIUP & G-UIUP \\
+	    \hline \hline                               
+	    BCW              & 88.4   & 88.2     \\ \hline
+	    CE               & 84.8   & 83.6     \\ \hline
+	    CA               & 91.1   & 89.3     \\ \hline
+	    GC               & 72.2   & 72.2     \\ \hline
+	    IN               & 87.0   & 79.6     \\ \hline
+	    MM               & 87.5   & 86.8     \\ \hline
+	    MS               & 84.8   & 70.3     \\ \hline
+	    NS               & 91.8   & 91.7     \\ \hline
+	    SH               & 93.2   & 92.6     \\ \hline
+	    TTT              & 72.1   & 71.9     \\ \hline
+	    VH               & 76.8   & 76.6     \\ \hline
+	    WN               & 96.0   & 95.5     \\ \hline
+	    %WAvg             & 84.2   & 83.6     \\ \hline
+	  \end{tabular}
+	  \caption{Accuracy (percentage of correctly handled testing examples)
+						 for UIUP PLP-trees learned using the best-agreement and
+						 the greedy methods on the learning 
+						 data (250 of $\cE^\succ$)}
+	  \label{tbl:trees1}
+	\end{table}
+}
 
+\frameT{Experimental Results: Best-Agreement vs. Greedy}
+{
   \begin{figure}
     \centering
-    \begin{subfigure}[b]{0.48\textwidth}
+    \begin{subfigure}[b]{0.3\textwidth}
       \centering
-      \includegraphics[width=0.95\textwidth]{figs/PrefLearnResults/MatLabOutput/CarEvaluation_Trees_X_MH.pdf}
-      \caption{Compare exact \& greedy heuristic}
+      \includegraphics[width=0.95\textwidth]{figs/PrefLearnResults/Trees/CarEvaluation_Trees_X_MH.pdf}
+			\captionsetup{font=scriptsize}
+      \caption{CarEvaluation}
     \end{subfigure}
-    \begin{subfigure}[b]{0.48\textwidth}
+    \begin{subfigure}[b]{0.3\textwidth}
       \centering
-      \includegraphics[width=0.95\textwidth]{figs/PrefLearnResults/MatLabOutput/CarEvaluation_Trees_MH.pdf}
-      \caption{Greedy heuristic}
+      \includegraphics[width=0.95\textwidth]{figs/PrefLearnResults/Trees/IonosphereDownsampledFurther_Trees_X_MH.pdf}
+			\captionsetup{font=scriptsize}
+      \caption{Ionosphere}
+    \end{subfigure}\\\vspace{0.3cm}
+    \begin{subfigure}[b]{0.3\textwidth}
+      \centering
+      \includegraphics[width=0.95\textwidth]{figs/PrefLearnResults/Trees/MushroomDownsampled_Trees_X_MH.pdf}
+			\captionsetup{font=scriptsize}
+      \caption{Mushroom}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.3\textwidth}
+      \centering
+      \includegraphics[width=0.95\textwidth]{figs/PrefLearnResults/Trees/WineDownsampled_Trees_X_MH.pdf}
+			\captionsetup{font=scriptsize}
+      \caption{Wine}
     \end{subfigure}
 
-    \caption{Learning curves solving \tsc{MaxLearn}}
+    \caption{Learning curves solving \tsc{MaxLearn} for UIUP PLP-trees}
   \end{figure}
 }
 
-\frameT{Experimental Results: Wine\footnote{
-\tiny \url{http://www.cs.uky.edu/~liu/preflearnlib.php}}
-}
+\frameT{Experimental Results: Greedy}
 {
-	\begin{center}
-		\#attributes:10, \#objects:177, \#examples:10322
-	\end{center}
+	\begin{table}
+	  \centering
+	  \small
+		\setlength\tabcolsep{6pt}
+	  %\begin{tabular}{ |c||c|c|r@{ | }l|c| }
+	  \begin{tabular}{ |c||c|c|c|c|c| }
+	    \hline
+	    %Dataset          	 & UIUP & UICP-1 & \multicolumn{2}{c|}{CIUP[D|B]}     & CICP \\
+	    Dataset          	 & UIUP & UICP-1 & CIUPB & CIUPD & CICP \\
+	    \hline \hline                                             
+	    BCW                & 90.7 & 91.4   & 91.0  & 90.7  & 91.4   \\ \hline
+	    CE                 & 85.8 & 86.0   & 85.8  & 85.9  & 86.0   \\ \hline
+	    CA                 & 91.4 & 91.7   & 91.6  & 92.0  & 92.2   \\ \hline
+	    GC                 & 74.3 & 74.6   & 74.3  & 74.5  & 75.7   \\ \hline
+	    IN                 & 87.1 & 86.9   & 87.2  & 88.5  & 90.4   \\ \hline
+	    MM                 & 88.2 & 89.5   & 87.3  & 86.9  & 90.0   \\ \hline
+	    MS                 & 71.6 & 74.2   & 77.1  & 75.6  & 76.6   \\ \hline
+	    NS                 & 92.9 & 93.0   & 93.0  & 93.0  & 93.0   \\ \hline
+	    SH                 & 93.4 & 94.9   & 95.4  & 94.8  & 95.7   \\ \hline
+	    TTT                & 73.9 & 74.5   & 74.4  & 75.4  & 76.2   \\ \hline
+	    VH                 & 79.2 & 80.4   & 80.3  & 80.0  & 81.2   \\ \hline
+	    WN                 & 95.5 & 97.8   & 97.8  & 97.5  & 97.8   \\ \hline
+	    %WAvg               & 85.4 & 85.7   & 85.6  & 85.8  & 86.1   \\ \hline
+	  \end{tabular}
+	  \caption{Accuracy percents on the testing data (30\% of $\cE^\succ$)
+						 for all four classes of PLP-trees, using models learned
+						 by the greedy algorithm from the learning 
+						 data (the other 70\% of $\cE^\succ$)}
+	  \label{tbl:trees2}
+	\end{table}
+}
 
+\frameT{Experimental Results: Sizes of PLP-trees by Greedy}{
+	\begin{table}
+	  \centering
+		\setlength\tabcolsep{6pt}
+	  \begin{tabular}{ |c||c|c|c|c| }
+	    \hline
+	    Dataset           & UIUP & UICP-1 & CI      & $|\cE^\succ_\train|$ \\
+	    \hline \hline                                 
+	    BCW               & 9    & 33     & 87,381   & 6,306   \\ \hline
+	    CE                & 6    & 21     & 853      & 477,904 \\ \hline
+	    CA                & 10   & 37     & 91,477   & 46,255  \\ \hline
+	    GC                & 10   & 37     & 349,525  & 120,657 \\ \hline
+	    IN                & 10   & 19     & 1,023    & 2,430   \\ \hline
+	    MM                & 5    & 17     & 341      & 554     \\ \hline
+	    MS                & 10   & 37     & 91,477   & 5,913   \\ \hline
+	    NS                & 8    & 29     & 7,765    & 383,644 \\ \hline
+	    SH                & 10   & 19     & 1,023    & 2,237   \\ \hline
+	    TTT               & 9    & 25     & 9,841    & 145,482 \\ \hline
+	    VH                & 10   & 37     & 349,525  & 53,699  \\ \hline
+	    WN                & 10   & 37     & 349,525  & 7,225   \\ \hline
+	    %Avg               & 8.9  & 29     & 111,646  & 104,359 \\ \hline
+	  \end{tabular}
+	  \caption{Maximum sizes of trees for all the classes and the 
+						 training sample sizes for all datasets}
+	  \label{tbl:trees_max_size}
+	\end{table}
+}
+
+\frameT{Experimental Results: Sizes of PLP-trees by Greedy}{
+	\begin{table}
+	  \centering
+		\setlength\tabcolsep{6pt}
+	  %\begin{tabular}{ |c||c|c|r@{ | }l|c| }
+	  \begin{tabular}{ |c||c|c|c|c|c| }
+	    \hline
+	    %Dataset          & UIUP & UICP-1 & \multicolumn{2}{c|}{CIUP[D|B]}     & CICP \\
+	    Dataset          & UIUP & UICP-1 & CIUPB & CIUPD  & CICP \\
+	    \hline \hline                                       
+	    BCW              & 6.7  & 21.8   & 19.8  & 28.0   & 25.7    \\ \hline
+	    CE               & 6.0  & 17.0   & 73.2  & 108.9  & 109.5   \\ \hline
+	    CA               & 9.0  & 24.7   & 31.3  & 78.6   & 81.1    \\ \hline
+	    GC               & 9.7  & 36.0   & 49.8  & 210.3  & 190.0   \\ \hline
+	    IN               & 9.6  & 17.2   & 19.8  & 31.5   & 30.6    \\ \hline
+	    MM               & 4.5  & 14.7   & 8.3   & 10.8   & 10.0    \\ \hline
+	    MS               & 7.6  & 20.7   & 15.7  & 22.7   & 16.3    \\ \hline
+	    NS               & 8.0  & 25.7   & 56.2  & 121.0  & 116.9   \\ \hline
+	    SH               & 8.4  & 13.7   & 13.0  & 18.4   & 19.0    \\ \hline
+	    TTT              & 8.0  & 21.8   & 36.8  & 126.8  & 115.2   \\ \hline
+	    VH               & 9.0  & 32.7   & 33.9  & 101.3  & 105.4   \\ \hline
+	    WN               & 5.1  & 13.3   & 14.2  & 16.9   & 14.6    \\ \hline
+	    %Avg              & 7.6  & 21.6   & 31.0  & 72.9   & 69.5    \\ \hline
+	  \end{tabular}
+	  \caption{Sizes of trees learned by the greedy algorithm from the training 
+						 data (70\% of $\cE^\succ$)}
+	  \label{tbl:trees_size}
+	\end{table}
+}
+
+\frameT{Experimental Results: Best-Agreement vs. Greedy}
+{
+	\begin{table}
+	  \centering
+	  \begin{tabular}{ |c||c|c|c| }
+	    \hline
+	    Dataset          & G+Tree & G+Forest & BA+Forest\\
+	    \hline \hline
+	    BCW              & 90.7   & 93.4     & 95.1 \\ \hline
+	    CE               & 85.8   & 91.9     & 89.2 \\ \hline      
+	    CA               & 91.4   & 91.5     & 93.1 \\ \hline       
+	    GC               & 74.3   & 75.4     & 77.9 \\ \hline     
+	    IN               & 87.1   & 83.0     & 92.5 \\ \hline   
+	    MM               & 88.2   & 89.1     & 90.8 \\ \hline         
+	    MS               & 71.6   & 78.8     & 90.2 \\ \hline 
+	    NS               & 92.9   & 93.2     & 94.0 \\ \hline
+	    SH               & 93.4   & 93.7     & 94.9 \\ \hline   
+	    TTT              & 73.9   & 75.1     & 77.2 \\ \hline 
+	    VH               & 79.2   & 82.7     & 81.9 \\ \hline
+	    WN               & 95.5   & 95.8     & 96.9 \\ \hline
+	    %WAvg             & 85.4   & 88.3     & 88.1 \\ \hline
+	  \end{tabular}
+	  \caption{Accuracy percents on the testing data (30\% of $\cE^\succ$)
+						 for UIUP trees and forests of 5000 UIUP trees, 
+						 using the greedy and the best-agreement algorithms from the learning 
+						 data (the other 70\% of $\cE^\succ$)}
+	  \label{tbl:forests1}
+	\end{table}
+}
+
+\frameT{Experimental Results: Greedy}
+{
+	\begin{table}
+	  \centering
+	  %\begin{tabular}{ |c||c|c|r@{ | }l|c| }
+	  \begin{tabular}{ |c||c|c|c|c|c| }
+	    \hline
+	    Dataset          				 & UIUP & UICP-1 & CIUPB & CIUPD & CICP \\
+	    \hline \hline                                              
+	    BCW                      & 93.4 & 94.1   & 93.7  & 94.1  & 94.0 \\ \hline
+	    CE                       & 91.9 & 88.3   & 91.4  & 89.7  & 91.4 \\ \hline
+	    CA                       & 91.5 & 91.6   & 92.8  & 92.9  & 93.0 \\ \hline 
+	    GC                       & 75.4 & 73.8   & 76.1  & 76.1  & 76.2 \\ \hline     
+	    IN                       & 83.0 & 87.9   & 89.3  & 89.4  & 89.5 \\ \hline   
+	    MM                       & 89.1 & 90.1   & 90.0  & 90.1  & 90.2 \\ \hline         
+	    MS                       & 78.8 & 87.2   & 92.2  & 92.2  & 91.8 \\ \hline 
+	    NS                       & 93.2 & 89.9   & 93.3  & 93.4  & 93.4 \\ \hline
+	    SH                       & 93.7 & 93.5   & 93.6  & 93.6  & 93.7 \\ \hline   
+	    TTT                      & 75.1 & 75.2   & 76.6  & 76.5  & 76.9 \\ \hline 
+	    VH                       & 82.7 & 81.8   & 83.2  & 83.2  & 83.4 \\ \hline
+	    WN                       & 95.8 & 95.4   & 97.5  & 97.8  & 97.8 \\ \hline
+	    %WAvg                     & 88.3 & 85.8   & 88.5  & 87.9  & 88.6 \\ \hline
+	  \end{tabular}
+	  \caption{Accuracy percents on the testing data (30\% of $\cE^\succ$)
+						 for all four classes of PLP-forests of 5000 trees, 
+						 using the greedy algorithm from the learning 
+						 data (the other 70\% of $\cE^\succ$)}
+	  \label{tbl:forests2}
+	\end{table}
+}
+
+\frameT{Experimental Results: UIUP vs. CICP}
+{
   \begin{figure}
     \centering
-    \begin{subfigure}[b]{0.48\textwidth}
+    \begin{subfigure}[b]{0.3\textwidth}
       \centering
-      \includegraphics[width=0.95\textwidth]{figs/PrefLearnResults/MatLabOutput/Wine_Trees_X_MH.pdf}
-      \caption{Compare exact \& greedy heuristic}
+      \includegraphics[width=0.95\textwidth]{figs/PrefLearnResults/Forests/CarEvaluation_Forests_MH.pdf}
+			\captionsetup{font=scriptsize}
+      \caption{CarEvaluation}
     \end{subfigure}
-    \begin{subfigure}[b]{0.48\textwidth}
+    \begin{subfigure}[b]{0.3\textwidth}
       \centering
-      \includegraphics[width=0.95\textwidth]{figs/PrefLearnResults/MatLabOutput/Wine_Trees_MH.pdf}
-      \caption{Greedy heuristic}
+      \includegraphics[width=0.95\textwidth]{figs/PrefLearnResults/Forests/IonosphereDownsampledFurther_Forests_MH.pdf}
+			\captionsetup{font=scriptsize}
+      \caption{Ionosphere}
+    \end{subfigure}\\\vspace{0.3cm}
+    \begin{subfigure}[b]{0.3\textwidth}
+      \centering
+      \includegraphics[width=0.95\textwidth]{figs/PrefLearnResults/Forests/MushroomDownsampled_Forests_MH.pdf}
+			\captionsetup{font=scriptsize}
+      \caption{Mushroom}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.3\textwidth}
+      \centering
+      \includegraphics[width=0.95\textwidth]{figs/PrefLearnResults/Forests/WineDownsampled_Forests_MH.pdf}
+			\captionsetup{font=scriptsize}
+      \caption{Wine}
     \end{subfigure}
 
-    \caption{Learning curves solving \tsc{MaxLearn}}
+    \caption{Greedy learning curves solving \tsc{MaxLearn} for PLP-forests}
   \end{figure}
 }
 

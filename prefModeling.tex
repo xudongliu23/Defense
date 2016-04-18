@@ -764,8 +764,6 @@
 \frameT{Compact Representations of PLP-Tree}{
 	\begin{figure}
 	  \centering
-		\begin{subfigure}[b]{0.95\textwidth}
-	    \centering
       \begin{tikzpicture}[->,>=stealth',
 	      level 1/.style={sibling distance=2.9cm, level distance=33pt},
 	      level 2/.style={sibling distance=1.8cm, level distance=27pt},
@@ -808,40 +806,6 @@
 						edge from parent node[left]  {\tiny{s}}}
           edge from parent node[right] {\small{l}}};
       \end{tikzpicture}
-			\caption{Full}
-		\end{subfigure}\\
-		\begin{subfigure}[b]{0.35\textwidth}
-			\centering
-      \begin{tikzpicture}[->,>=stealth',
-	      level 1/.style={sibling distance=2cm, level distance=33pt},
-	      level 2/.style={sibling distance=0.7cm, level distance=27pt}
-	    ]
-	  	      
-	  	  \node[main node,inner sep=2pt] (1) {S};
-	  	  \node[rectangle,draw,inner sep=2pt] at (1,0) {$h\!\! >\!\! m\!\! >\!\! l$};
-	
-	  	  \node[main node,inner sep=2pt] (2) [below left of=1] {C};
-	  	  \node[rectangle,draw,inner sep=2pt] at (-1.6,-0.7) {$5\!\! >\!\! 7\!\! >\!\! 2$};
-
-	  	  \node[main node,inner sep=2pt] (3) [below of=2] {L};
-	  	  \node[rectangle,draw,inner sep=2pt] at (-1.6,-1.7) {$b\!\! >\!\! m\!\! >\!\! s$};
-	  	
-	  	  \node[main node,inner sep=2pt] (4) [below right of=1] {L};
-	  	  \node[rectangle,draw,inner sep=2pt] at (1.6,-0.7) {$b\!\! >\!\! m\!\! >\!\! s$};
-	  	
-	  	  \node[main node,inner sep=2pt] (5) [below of=4] {C};
-	  	  \node[rectangle,draw,inner sep=2pt] at (1.6,-1.7) {$5\!\! >\!\! 7\!\! >\!\! 2$};
-
-	  	  %\node[rectangle] (6) [below of=5] {};
-
-	  	  \path[every node/.style={font=\sffamily\small}]
-	  	    (1) edge [left]  node{\tiny h} (2)
-	  	    (1) edge [right] node{\tiny l} (4)
-	  	    (2) edge (3)
-	  	    (4) edge (5);
-	  	\end{tikzpicture}
-			\caption{Compact}
-		\end{subfigure}
 	\caption{Conditional Importance \& Unconditional Preference (CIUP)}
 	\end{figure}
 }
@@ -849,8 +813,6 @@
 \frameT{Compact Representations of PLP-Tree}{
 	\begin{figure}
 	  \centering
-		\begin{subfigure}[b]{0.95\textwidth}
-	    \centering
       \begin{tikzpicture}[->,>=stealth',
 	      level 1/.style={sibling distance=2.9cm, level distance=33pt},
 	      level 2/.style={sibling distance=1.8cm, level distance=27pt},
@@ -893,55 +855,6 @@
 						edge from parent node[left]  {\tiny{s}}}
           edge from parent node[right] {\small{l}}};
       \end{tikzpicture}
-			\caption{Full}
-		\end{subfigure}\\
-		\begin{subfigure}[b]{0.4\textwidth}
-			\centering
-      \begin{tikzpicture}[->,>=stealth',
-	      level 1/.style={sibling distance=2cm, level distance=33pt},
-	      level 2/.style={sibling distance=0.7cm, level distance=27pt}
-	    ]
-	  	      
-	  	  \node[main node,inner sep=2pt] (1) {S};
-	  	  \node[rectangle,draw,inner sep=2pt] at (1,0) {$h\!\! >\!\! m\!\! >\!\! l$};
-	
-	  	  \node[main node,inner sep=2pt] (2) [below left of=1] {C};
-	  	  \node[rectangle,draw,inner sep=2pt] at (-1.6,-0.7) {$5\!\! >\!\! 7\!\! >\!\! 2$};
-
-	  	  \node[main node,inner sep=2pt] (3) [below of=2] {L};
-	    	\node[rectangle split, rectangle split parts=3, draw,inner sep=2pt,font=\sffamily\small] at (-1.8,-1.7)
-	    	    {
-							$2\!:\!s \!\!>\!\! m\!\!>\!\! b$
-	    	      \nodepart{second}
-							$5\!:\!m \!\!>\!\! b\!\!>\!\! s$
-	    	      \nodepart{third}
-							$7\!:\!b \!\!>\!\! m\!\!>\!\! s$
-	    	    };
-	  	
-	  	  \node[main node,inner sep=2pt] (4) [below right of=1] {L};
-	  	  \node[rectangle,draw,inner sep=2pt] at (1.6,-0.7) {$b\!\! >\!\! m\!\! >\!\! s$};
-	  	
-	  	  \node[main node,inner sep=2pt] (5) [below of=4] {C};
-	    	\node[rectangle split, rectangle split parts=3, draw,inner sep=2pt,font=\sffamily\small] at (1.8,-1.7)
-	    	    {
-							$b\!:\!7 \!\!>\!\! 5\!\!>\!\! 2$
-	    	      \nodepart{second}
-							$m\!:\!5 \!\!>\!\! 7\!\!>\!\! 2$
-	    	      \nodepart{third}
-							$s\!:\!2 \!\!>\!\! 5\!\!>\!\! 7$
-	    	    };
-
-	  	  %\node[rectangle] (6) [below of=5] {};
-
-	  	  \path[every node/.style={font=\sffamily\small}]
-	  	    (1) edge [left]  node{\tiny h} (2)
-	  	    (1) edge [right] node{\tiny l} (4)
-	  	    (2) edge (3)
-	  	    (4) edge (5);
-	  	\end{tikzpicture}
-			\caption{Compact}
-		\end{subfigure}
-	\vspace{-0.2cm}
 	\caption{Conditional Importance \& Conditional Preference (CICP)}
 	\end{figure}
 }
