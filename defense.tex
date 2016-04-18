@@ -100,18 +100,19 @@
 \makeatletter
 \setbeamertemplate{footline}
 {
+	\setbeamercolor{author in head/foot}{fg=gray, bg=white}
 	\setbeamercolor{title in head/foot}{fg=gray, bg=white}
 	\setbeamercolor{date in head/foot}{fg=gray, bg=white}
   \leavevmode%
   \hbox{%
-%  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
-%    \usebeamerfont{author in head/foot}\insertshorttitle
-%									 %\beamer@ifempty{\insertshortinstitute}{}{(\insertshortinstitute)}
-%  \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
-    \usebeamerfont{title in head/foot}
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}%\insertshorttitle
+									 %\beamer@ifempty{\insertshortinstitute}{}{(\insertshortinstitute)}
   \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}%\insertsection
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
     \usebeamerfont{date in head/foot}\insertsection\hspace*{2em}
     \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
   \end{beamercolorbox}}%
@@ -209,12 +210,12 @@
 \makeatother
 %%%%%%%%%%% END MACROS %%%%%%%%%%%%%%%%%%
 
-
+\setbeamertemplate{frametitle}[default][center]
 
 \begin{document}
 
 \title[Preference Trees]
-	{Preference Trees over Combinatorial Domains}
+	{Modeling, Learning and Reasoning about Preference Trees over Combinatorial Domains}
 \author[Xudong Liu]{\linebreak \linebreak Xudong Liu}
 \institute{Advisor: Dr. Miroslaw Truszczynski \linebreak \linebreak
 					 Department of Computer Science \\ 
@@ -256,8 +257,8 @@
 \section{Future Research Scenarios}
 \input{future}
 
-\section{Student Involvement in Research}
-\input{studentInvolvement}
+%\section{Student Involvement in Research}
+%\input{studentInvolvement}
 
 \section{Publications}
 \input{mypubs}

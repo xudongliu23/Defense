@@ -31,15 +31,27 @@
 % \end{enumerate}
 %}
 
+%\frameT{Outline}{
+%  \begin{enumerate}
+%    {\transparent{0.2} \item The languages of PLP-trees and LP-trees}
+%    {\transparent{0.2} \item Learning preference models in case of PLP-trees}
+%    \item Reasoning with preferences:
+%      \begin{itemize}
+%        \item Computing winners and ``strong" candidates when votes are LP-trees
+%        {\transparent{0.2} \item Application in trip planning}
+%      \end{itemize}
+%    {\transparent{0.2} \item Future research directions}
+%  \end{enumerate}
+%}
 \frameT{Outline}{
   \begin{enumerate}
-    {\transparent{0.2} \item The languages of PLP-trees and LP-trees}
-    {\transparent{0.2} \item Learning preference models in case of PLP-trees}
-    \item Reasoning with preferences:
-      \begin{itemize}
-        \item Computing winners and ``strong" candidates when votes are LP-trees
-        {\transparent{0.2} \item Application in trip planning}
-      \end{itemize}
+    {\transparent{0.2} \item Modeling qualitative preferences:
+    \begin{itemize}
+      \item Preference trees (P-trees)
+      \item Partial lexicographic preference trees (PLP-trees)
+    \end{itemize}}
+    {\transparent{0.2} \item Learning PLP-trees and PLP-forests}
+    \item Aggregating LP-trees
     {\transparent{0.2} \item Future research directions}
   \end{enumerate}
 }
@@ -292,42 +304,42 @@
 	\end{figure}
 }
 
-\frameT{Outline}{
-  \begin{enumerate}
-    {\transparent{0.2} \item The languages of PLP-trees and LP-trees}
-    {\transparent{0.2} \item Learning preference models in case of PLP-trees}
-    \item Reasoning with preferences:
-      \begin{itemize}
-        {\transparent{0.2} \item Computing winners and ``strong" candidates when votes are LP-trees}
-        \item Application in trip planning
-      \end{itemize}
-    {\transparent{0.2} \item Future research directions}
-  \end{enumerate}
-}
-
-\frameT{Personalization in Trip Planning}{
-	\begin{enumerate}
-		\item Important to incorporate user constraints and preferences into trip
-					planning systems.
-		\item Collaboration with experts (in AI, planning, optimization, multi-agent systems) at PARC.
-		\item Developed a hipergraph-based trip planner that accommodates constraints specified as
-					\tit{linear temporal logic} and preferences expressed as \tit{preferential cost function} 
-					to compute optimal routes using A*\footcitefull{abs/parc/Liu2}.
-		\item Available later for trip planning in the Bay Area, LA, and Denver.
-	\end{enumerate}
-}
-
-\frameT{Personalization in Trip Planning}{
-	\begin{enumerate}
-		\item From SJC, to Pier 39, Monday, 9am.
-		\item Constraints: never drive a car, and bike for 1 to 2 hours.
-		\item Preferences: bike = public (0.25) $>$ wait(2) $>$ walk(3), and 30\$/hr.
-	\end{enumerate}
-
-	\vspace{-0.3cm}
-
-	\begin{figure}[ht!]
-	  \centering
-	    \includegraphics[width=0.7\textwidth]{figs/PARC/route.png}
-	\end{figure}
-}
+%\frameT{Outline}{
+%  \begin{enumerate}
+%    {\transparent{0.2} \item The languages of PLP-trees and LP-trees}
+%    {\transparent{0.2} \item Learning preference models in case of PLP-trees}
+%    \item Reasoning with preferences:
+%      \begin{itemize}
+%        {\transparent{0.2} \item Computing winners and ``strong" candidates when votes are LP-trees}
+%        \item Application in trip planning
+%      \end{itemize}
+%    {\transparent{0.2} \item Future research directions}
+%  \end{enumerate}
+%}
+%
+%\frameT{Personalization in Trip Planning}{
+%	\begin{enumerate}
+%		\item Important to incorporate user constraints and preferences into trip
+%					planning systems.
+%		\item Collaboration with experts (in AI, planning, optimization, multi-agent systems) at PARC.
+%		\item Developed a hipergraph-based trip planner that accommodates constraints specified as
+%					\tit{linear temporal logic} and preferences expressed as \tit{preferential cost function} 
+%					to compute optimal routes using A*\footcitefull{abs/parc/Liu2}.
+%		\item Available later for trip planning in the Bay Area, LA, and Denver.
+%	\end{enumerate}
+%}
+%
+%\frameT{Personalization in Trip Planning}{
+%	\begin{enumerate}
+%		\item From SJC, to Pier 39, Monday, 9am.
+%		\item Constraints: never drive a car, and bike for 1 to 2 hours.
+%		\item Preferences: bike = public (0.25) $>$ wait(2) $>$ walk(3), and 30\$/hr.
+%	\end{enumerate}
+%
+%	\vspace{-0.3cm}
+%
+%	\begin{figure}[ht!]
+%	  \centering
+%	    \includegraphics[width=0.7\textwidth]{figs/PARC/route.png}
+%	\end{figure}
+%}

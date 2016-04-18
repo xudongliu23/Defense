@@ -1,13 +1,25 @@
+%\frameT{Outline}{
+%  \begin{enumerate}
+%    {\transparent{0.2} \item The languages of PLP-trees and LP-trees}
+%    \item Learning preference models in case of PLP-trees
+%    {\transparent{0.2} \item Reasoning with preferences:
+%      \begin{itemize}
+%        \item Computing winners and ``strong" candidates when votes are LP-trees
+%        \item Application in trip planning
+%      \end{itemize}}
+%    {\transparent{0.2} \item Future research directions}
+%  \end{enumerate}
+%}
 \frameT{Outline}{
   \begin{enumerate}
-    {\transparent{0.2} \item The languages of PLP-trees and LP-trees}
-    \item Learning preference models in case of PLP-trees
-    {\transparent{0.2} \item Reasoning with preferences:
-      \begin{itemize}
-        \item Computing winners and ``strong" candidates when votes are LP-trees
-        \item Application in trip planning
-      \end{itemize}}
-    {\transparent{0.2} \item Future research directions}
+    {\transparent{0.2} \item Modeling qualitative preferences:
+    \begin{itemize}
+      \item Preference trees (P-trees)
+      \item Partial lexicographic preference trees (PLP-trees)
+    \end{itemize}}
+    \item Learning PLP-trees and PLP-forests
+    {\transparent{0.2} \item Aggregating LP-trees
+    \item Future research directions}
   \end{enumerate}
 }
 
@@ -307,33 +319,23 @@
 \frameT{Datasets}{
 	\begin{figure}
 		\centering
+		\small
 		\begin{tabular}{ |c||c|c|c|c| } 
 			\hline
-			Dataset          & \#Attributes & \#Objects & \#Examples \\
+			Dataset                 & $p$  & $|\cX|$ & $|\cE^\succ|$ & $|\cE^\approx|$ \\
 			\hline \hline
-			BreastCancerWisconsin   & 9 & 270 & 9,009 \\ 
-			\hline
-			CarEvaluation           & 6 & 1,728 & 682,721 \\ 
-			\hline
-			CreditApproval          & 10 & 520 & 66,079 \\
-			\hline
-			GermanCredit            & 10 & 914 & 172,368  \\
-			\hline
-			Ionosphere              & 10 & 118 & 3,472 \\
-			\hline
-			MammographicMass        & 5 & 62 & 792 \\
-			\hline
-			Mushroom                & 10 & 184 & 8,448 \\
-			\hline
-			Nursery                 & 8 & 1,266 & 548,064 \\
-			\hline
-			SPECTHeart              & 10 & 115 & 3,196 \\
-			\hline
-			TicTacToe               & 9 & 958 & 207,832 \\
-			\hline
-			Vehicle                 & 10 & 455 & 76,713 \\
-			\hline
-			Wine                    & 10 & 177 & 10,322 \\
+			BreastCancerWisconsin   & 9    & 270 & 9,009 & 27,306 \\ \hline
+			CarEvaluation           & 6    & 1,728 & 682,721 & 809,407\\ \hline
+			CreditApproval          & 10   & 520 & 66,079 & 68,861 \\ \hline
+			GermanCredit            & 10   & 914 & 172,368 & 244,873 \\ \hline
+			Ionosphere              & 10   & 118 & 3,472 & 3,431 \\	\hline
+			MammographicMass        & 5    & 62 & 792 & 1,099 \\	\hline
+			Mushroom                & 10   & 184 & 8,448 & 8,388 \\	\hline
+			Nursery                 & 8    & 1,266 & 548,064 & 252,681 \\	\hline
+			SPECTHeart              & 10   & 115 & 3,196 & 3,359 \\	\hline
+			TicTacToe               & 9    & 958 & 207,832 & 250,571 \\ \hline
+			Vehicle                 & 10   & 455 & 76,713 & 26,572 \\ \hline
+			Wine                    & 10   & 177 & 10,322 & 5,254 \\
 			\hline
 		\end{tabular}
 		\caption{Preference Learning Library\footnotemark}
