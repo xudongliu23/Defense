@@ -439,8 +439,7 @@
   \end{figure}
 }
 
-\frameT{Experimental Results: Greedy}
-{
+\frameT{Experimental Results: Greedy}{
 	\begin{table}
 	  \centering
 	  \small
@@ -479,7 +478,7 @@
 		\setlength\tabcolsep{6pt}
 	  \begin{tabular}{ |c||c|c|c|c| }
 	    \hline
-	    Dataset           & UIUP & UICP-1 & CI      & $|\cE^\succ_\train|$ \\
+	    Dataset           & UIUP & UICP-1 & CI       & $|\cE^{\succ}_{\train}|$ \\
 	    \hline \hline                                 
 	    BCW               & 9    & 33     & 87,381   & 6,306   \\ \hline
 	    CE                & 6    & 21     & 853      & 477,904 \\ \hline
@@ -529,6 +528,19 @@
 						 data (70\% of $\cE^\succ$)}
 	  \label{tbl:trees_size}
 	\end{table}
+}
+
+\frameT{Partial Lexicographic Preference Forests (PLP-Forests)}{
+	\begin{enumerate}
+		\item Inspired by \tit{random forests}, we proposed \tit{PLP-forests}
+					that are sets of PLP-trees; thus, the four classes.
+		\item To reduce the overfitting of a PLP-tree, a PLP-forest
+		\begin{itemize}
+			\item consists of \tit{diverse} trees (learned from \tit{small} training samples), and
+			\item aggregates its constituent trees using the \tit{Pairwise Majority
+						Rule} (PMR).
+		\end{itemize}
+	\end{enumerate}
 }
 
 \frameT{Experimental Results: Best-Agreement vs. Greedy}
@@ -656,3 +668,15 @@
 %    \caption{Learning all four classes using greedy heuristic}
 %  \end{figure}
 %}
+
+\frameT{Conclusion}{
+	\begin{enumerate}
+		\item PLP-trees and PLP-forests are \tit{expressive} preference models.
+		\item PLP-forests aggregated by PRM provide in general \tit{higher} 
+					accuracy than PLP-trees.
+		\item PLP-trees and PLP-forests learned by a greedy approximation method 
+					have accuracy \tit{comparable} to best-agreement PLP-trees and PLP-forests.
+		\item The reedy algorithms are \tit{fast} and can work with \tit{large} 
+					datasets (of $\sim$ half million examples).
+	\end{enumerate}
+}

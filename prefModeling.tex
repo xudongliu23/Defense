@@ -429,7 +429,7 @@
 		Poss-theories = ASO-rules 
 		%$\subsetsim$ 
 		$\subset$
-			\dual{LP-trees/\dual{$\cap$/\dual{PLP-trees/\dual{$\cap$/P-trees}}}}
+			\dual{\tbf{LP-trees}/\dual{$\cap$/\dual{\tbf{PLP-trees}/\dual{$\cap$/\tbf{P-trees}}}}}
 			$\subset$ ASO-theories
 	\end{center}
 }
@@ -867,5 +867,16 @@
       \item each attribute appears \tbf{exactly once} on every path from the root to a leaf.
 			\item Unlike PLP-trees, an LP-tree induces a total order.
     \end{itemize}
+  \end{enumerate}
+}
+
+\frameT{Conclusion}
+{
+  \begin{enumerate}
+		\item Generalizing LP-trees, PLP-trees compactly represent total \tit{preorders} over combinatorial
+					domains, by allowing agents to specify, on each path, only a subset of attributes (i.e.,
+					those useful ones).
+		\item P-trees further generalize PLP-trees by labeling the nodes with \tit{propositional formulas},
+					in practice, usually built with small number (e.g., at most 3) of attributes.
   \end{enumerate}
 }
