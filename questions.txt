@@ -1,0 +1,17 @@
+Dr. Hayes:
+	1. Have you considered infinite domains?
+	2. Would the problems be easier should the attributes be binary?
+	3. Statistical significance?
+
+Dr. Jaromczyk:
+	1. What is the complexity of collapsing trees?
+
+Dr. Cheung:
+	1. The problem of learning the smallest model satisfying as many examples as possible?
+	2. Compactness of the PLP-trees?
+	3. Compare learning results with other lanuages (e.g., ASO, CP-nets)?
+
+Promising future directions:
+	1. Approximating CP-nets using trees.
+	2. Learning trees on more datasets.
+	3. Preference applications.
